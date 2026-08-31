@@ -3,47 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bütçem — Gizlilik Politikası</title>
+<title>Bütçem — Privacy Policy</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1c2a26; }
   h1 { font-size: 1.6em; } h2 { font-size: 1.2em; margin-top: 2em; }
   .updated { color: #666; font-size: 0.9em; }
+  .langbar { margin-bottom: 24px; }
+  .langbar button { font-size: 0.85em; padding: 6px 12px; margin-right: 6px; border: 1px solid #ccc; border-radius: 8px; background: #f4f4f2; cursor: pointer; }
+  .langbar button.active { background: #24544b; color: #fff; border-color: #24544b; }
+  [data-lang-block] { display: none; }
+  [data-lang-block].active { display: block; }
 </style>
 </head>
 <body>
+<div class="langbar">
+  <button data-lang="tr" onclick="setLang('tr')">Türkçe</button>
+  <button data-lang="en" onclick="setLang('en')">English</button>
+  <button data-lang="de" onclick="setLang('de')">Deutsch</button>
+  <button data-lang="pt" onclick="setLang('pt')">Português</button>
+  <button data-lang="es" onclick="setLang('es')">Español</button>
+  <button data-lang="fr" onclick="setLang('fr')">Français</button>
+</div>
+
+<div data-lang-block="tr">
 <h1>Bütçem — Gizlilik Politikası</h1>
 <p class="updated">Son güncelleme: 31 Ağustos 2026</p>
-
 <p>Bütçem, kişisel ve ortak (grup) bütçe takibi için geliştirilmiş bir mobil uygulamadır. Bu sayfa, uygulamayı kullanırken hangi verilerin toplandığını, nasıl saklandığını ve haklarınızın neler olduğunu açıklar.</p>
-
 <h2>Hangi veriler toplanır</h2>
 <ul>
   <li><strong>Hesap bilgisi:</strong> e-posta adresi (e-posta ile veya Google/Apple ile giriş yaptığınızda), görünen ad. Uygulamayı hesap oluşturmadan (misafir modu) da kullanabilirsiniz.</li>
   <li><strong>Bütçe verisi:</strong> girdiğiniz gelir/gider kayıtları, kategoriler, tutarlar, tarihler, ödeme yöntemi notları. Bir gruba (ortak bütçe) katılırsanız bu veriler grup üyeleriyle paylaşılır.</li>
   <li><strong>Cihaz/teknik veri:</strong> uygulama çökerse teşhis amaçlı çökme raporu (Firebase Crashlytics) — kişisel finansal veri içermez.</li>
 </ul>
-
 <h2>Veriler nerede saklanır</h2>
 <p>Tüm veriler Google'ın Firebase altyapısında (Firebase Authentication, Cloud Firestore) saklanır. Bütçem'in kendi sunucusu yoktur; veriye erişim Firebase'in güvenlik kurallarıyla, yalnızca hesap sahibi ve (paylaşılan kayıtlar için) grup üyeleriyle sınırlıdır.</p>
-
 <p>Döviz cinsinden girilen kayıtların TL karşılığı hesaplanırken (bu özellik açıkça etkinleştirilirse) Frankfurter (frankfurter.dev) kur servisine yalnızca tarih ve para birimi bilgisi gönderilir — kişisel veri paylaşılmaz.</p>
-
 <h2>Veriler nasıl kullanılır</h2>
 <p>Toplanan veriler yalnızca uygulamanın kendi işlevlerini (bütçe takibi, raporlar, hatırlatma bildirimleri) sağlamak için kullanılır. Veriler üçüncü taraflara satılmaz veya pazarlama amacıyla paylaşılmaz.</p>
-
 <h2>Bildirimler</h2>
 <p>Uygulama, izin verdiğiniz takdirde bütçe hatırlatıcıları ve özet bildirimleri göstermek için cihazınızda yerel bildirimler kullanır. Bu bildirimler cihazınızda üretilir, bir sunucudan gönderilmez.</p>
-
 <h2>Verilerinizi silme</h2>
 <p>Uygulama içinden (Profil → Hesabı Sil) hesabınızı ve ona ait tüm verileri kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz.</p>
-
 <h2>Çocukların gizliliği</h2>
 <p>Bütçem, 13 yaş altı çocuklara yönelik değildir ve bilerek onlardan veri toplamaz.</p>
-
 <h2>İletişim</h2>
 <p>Gizlilikle ilgili sorularınız için: <a href="mailto:alparslann95@gmail.com">alparslann95@gmail.com</a></p>
-
 <h2>Değişiklikler</h2>
 <p>Bu politika zaman zaman güncellenebilir; önemli değişiklikler uygulama içinden duyurulur.</p>
+</div>
+
+<div data-lang-block="en">
+<h1>Bütçem — Privacy Policy</h1>
+<p class="updated">Last updated: August 31, 2026</p>
+<p>Bütçem is a mobile app for personal and shared (group) budget tracking. This page explains what data is collected when you use the app, how it is stored, and what rights you have.</p>
+<h2>What data is collected</h2>
+<ul>
+  <li><strong>Account information:</strong> email address (when signing in with email, Google, or Apple), display name. You can also use the app without an account (guest mode).</li>
+  <li><strong>Budget data:</strong> the income/expense records you enter, categories, amounts, dates, payment-method notes. If you join a group (shared budget), this data is shared with group members.</li>
+  <li><strong>Device/technical data:</strong> if the app crashes, a diagnostic crash report is sent (Firebase Crashlytics) — it does not contain personal financial data.</li>
+</ul>
+<h2>Where data is stored</h2>
+<p>All data is stored on Google's Firebase infrastructure (Firebase Authentication, Cloud Firestore). Bütçem has no server of its own; access to data is restricted by Firebase security rules to the account owner and, for shared records, the members of that group.</p>
+<p>When converting a foreign-currency record to its Turkish lira equivalent (only if you explicitly enable this feature), only the date and currency code are sent to the Frankfurter (frankfurter.dev) exchange-rate service — no personal data is shared.</p>
+<h2>How data is used</h2>
+<p>Collected data is used only to provide the app's own features (budget tracking, reports, reminder notifications). Data is never sold or shared for marketing purposes.</p>
+<h2>Notifications</h2>
+<p>If you grant permission, the app uses local notifications on your device to show budget reminders and summaries. These notifications are generated on your device, not sent from a server.</p>
+<h2>Deleting your data</h2>
+<p>You can permanently delete your account and all associated data from within the app (Profile → Delete Account). This action cannot be undone.</p>
+<h2>Children's privacy</h2>
+<p>Bütçem is not directed at children under 13 and does not knowingly collect data from them.</p>
+<h2>Contact</h2>
+<p>For privacy questions: <a href="mailto:alparslann95@gmail.com">alparslann95@gmail.com</a></p>
+<h2>Changes</h2>
+<p>This policy may be updated from time to time; significant changes will be announced within the app.</p>
+</div>
+
+<div data-lang-block="de">
+<h1>Bütçem — Datenschutzerklärung</h1>
+<p class="updated">Zuletzt aktualisiert: 31. August 2026</p>
+<p>Bütçem ist eine mobile App zur persönlichen und gemeinsamen (Gruppen-) Budgetverfolgung. Diese Seite erklärt, welche Daten bei der Nutzung der App erhoben werden, wie sie gespeichert werden und welche Rechte Sie haben.</p>
+<h2>Welche Daten werden erhoben</h2>
+<ul>
+  <li><strong>Kontoinformationen:</strong> E-Mail-Adresse (bei Anmeldung per E-Mail, Google oder Apple), Anzeigename. Sie können die App auch ohne Konto nutzen (Gastmodus).</li>
+  <li><strong>Budgetdaten:</strong> die von Ihnen eingegebenen Einnahmen-/Ausgabenbuchungen, Kategorien, Beträge, Daten, Zahlungsmethodennotizen. Wenn Sie einer Gruppe (gemeinsames Budget) beitreten, werden diese Daten mit den Gruppenmitgliedern geteilt.</li>
+  <li><strong>Geräte-/technische Daten:</strong> stürzt die App ab, wird ein Diagnose-Absturzbericht gesendet (Firebase Crashlytics) — er enthält keine persönlichen Finanzdaten.</li>
+</ul>
+<h2>Wo Daten gespeichert werden</h2>
+<p>Alle Daten werden auf Googles Firebase-Infrastruktur gespeichert (Firebase Authentication, Cloud Firestore). Bütçem betreibt keinen eigenen Server; der Datenzugriff ist durch Firebase-Sicherheitsregeln auf den Kontoinhaber und, bei geteilten Einträgen, die Mitglieder dieser Gruppe beschränkt.</p>
+<p>Bei der Umrechnung eines Fremdwährungseintrags in türkische Lira (nur wenn Sie diese Funktion ausdrücklich aktivieren) werden nur Datum und Währungscode an den Wechselkursdienst Frankfurter (frankfurter.dev) gesendet — es werden keine personenbezogenen Daten weitergegeben.</p>
+<h2>Wie Daten verwendet werden</h2>
+<p>Erhobene Daten werden ausschließlich zur Bereitstellung der Funktionen der App (Budgetverfolgung, Berichte, Erinnerungsbenachrichtigungen) verwendet. Daten werden niemals verkauft oder zu Marketingzwecken weitergegeben.</p>
+<h2>Benachrichtigungen</h2>
+<p>Mit Ihrer Erlaubnis verwendet die App lokale Benachrichtigungen auf Ihrem Gerät, um Budgeterinnerungen und Zusammenfassungen anzuzeigen. Diese Benachrichtigungen werden auf Ihrem Gerät erzeugt, nicht von einem Server gesendet.</p>
+<h2>Löschen Ihrer Daten</h2>
+<p>Sie können Ihr Konto und alle zugehörigen Daten dauerhaft aus der App löschen (Profil → Konto löschen). Dieser Vorgang kann nicht rückgängig gemacht werden.</p>
+<h2>Datenschutz für Kinder</h2>
+<p>Bütçem richtet sich nicht an Kinder unter 13 Jahren und erhebt wissentlich keine Daten von ihnen.</p>
+<h2>Kontakt</h2>
+<p>Bei Fragen zum Datenschutz: <a href="mailto:alparslann95@gmail.com">alparslann95@gmail.com</a></p>
+<h2>Änderungen</h2>
+<p>Diese Richtlinie kann von Zeit zu Zeit aktualisiert werden; wesentliche Änderungen werden in der App bekannt gegeben.</p>
+</div>
+
+<div data-lang-block="pt">
+<h1>Bütçem — Política de Privacidade</h1>
+<p class="updated">Última atualização: 31 de agosto de 2026</p>
+<p>Bütçem é um aplicativo móvel para controle de orçamento pessoal e compartilhado (em grupo). Esta página explica quais dados são coletados ao usar o aplicativo, como são armazenados e quais são os seus direitos.</p>
+<h2>Quais dados são coletados</h2>
+<ul>
+  <li><strong>Informações da conta:</strong> endereço de e-mail (ao entrar com e-mail, Google ou Apple), nome de exibição. Você também pode usar o aplicativo sem uma conta (modo convidado).</li>
+  <li><strong>Dados do orçamento:</strong> os registros de receitas/despesas inseridos por você, categorias, valores, datas, notas de forma de pagamento. Se você entrar em um grupo (orçamento compartilhado), esses dados são compartilhados com os membros do grupo.</li>
+  <li><strong>Dados técnicos/do dispositivo:</strong> se o aplicativo travar, um relatório de falha de diagnóstico é enviado (Firebase Crashlytics) — não contém dados financeiros pessoais.</li>
+</ul>
+<h2>Onde os dados são armazenados</h2>
+<p>Todos os dados são armazenados na infraestrutura Firebase do Google (Firebase Authentication, Cloud Firestore). O Bütçem não possui servidor próprio; o acesso aos dados é restrito pelas regras de segurança do Firebase ao proprietário da conta e, no caso de registros compartilhados, aos membros desse grupo.</p>
+<p>Ao converter um registro em moeda estrangeira para o equivalente em lira turca (somente se você ativar explicitamente esse recurso), apenas a data e o código da moeda são enviados ao serviço de câmbio Frankfurter (frankfurter.dev) — nenhum dado pessoal é compartilhado.</p>
+<h2>Como os dados são usados</h2>
+<p>Os dados coletados são usados apenas para fornecer os próprios recursos do aplicativo (controle de orçamento, relatórios, notificações de lembrete). Os dados nunca são vendidos ou compartilhados para fins de marketing.</p>
+<h2>Notificações</h2>
+<p>Se você conceder permissão, o aplicativo usa notificações locais no seu dispositivo para mostrar lembretes e resumos de orçamento. Essas notificações são geradas no seu dispositivo, não enviadas por um servidor.</p>
+<h2>Excluindo seus dados</h2>
+<p>Você pode excluir permanentemente sua conta e todos os dados associados de dentro do aplicativo (Perfil → Excluir Conta). Esta ação não pode ser desfeita.</p>
+<h2>Privacidade das crianças</h2>
+<p>O Bütçem não é direcionado a crianças menores de 13 anos e não coleta dados delas intencionalmente.</p>
+<h2>Contato</h2>
+<p>Para dúvidas sobre privacidade: <a href="mailto:alparslann95@gmail.com">alparslann95@gmail.com</a></p>
+<h2>Alterações</h2>
+<p>Esta política pode ser atualizada periodicamente; mudanças significativas serão anunciadas dentro do aplicativo.</p>
+</div>
+
+<div data-lang-block="es">
+<h1>Bütçem — Política de Privacidad</h1>
+<p class="updated">Última actualización: 31 de agosto de 2026</p>
+<p>Bütçem es una aplicación móvil para el seguimiento de presupuesto personal y compartido (en grupo). Esta página explica qué datos se recopilan al usar la aplicación, cómo se almacenan y cuáles son sus derechos.</p>
+<h2>Qué datos se recopilan</h2>
+<ul>
+  <li><strong>Información de la cuenta:</strong> dirección de correo electrónico (al iniciar sesión con correo, Google o Apple), nombre visible. También puedes usar la aplicación sin una cuenta (modo invitado).</li>
+  <li><strong>Datos de presupuesto:</strong> los registros de ingresos/gastos que introduces, categorías, importes, fechas, notas del método de pago. Si te unes a un grupo (presupuesto compartido), estos datos se comparten con los miembros del grupo.</li>
+  <li><strong>Datos técnicos/del dispositivo:</strong> si la aplicación falla, se envía un informe de fallo de diagnóstico (Firebase Crashlytics) — no contiene datos financieros personales.</li>
+</ul>
+<h2>Dónde se almacenan los datos</h2>
+<p>Todos los datos se almacenan en la infraestructura Firebase de Google (Firebase Authentication, Cloud Firestore). Bütçem no tiene servidor propio; el acceso a los datos está restringido por las reglas de seguridad de Firebase al propietario de la cuenta y, para registros compartidos, a los miembros de ese grupo.</p>
+<p>Al convertir un registro en moneda extranjera a su equivalente en lira turca (solo si activas explícitamente esta función), únicamente se envía la fecha y el código de moneda al servicio de tipo de cambio Frankfurter (frankfurter.dev) — no se comparte ningún dato personal.</p>
+<h2>Cómo se usan los datos</h2>
+<p>Los datos recopilados se usan únicamente para proporcionar las funciones propias de la aplicación (seguimiento de presupuesto, informes, notificaciones de recordatorio). Los datos nunca se venden ni se comparten con fines de marketing.</p>
+<h2>Notificaciones</h2>
+<p>Si concedes permiso, la aplicación usa notificaciones locales en tu dispositivo para mostrar recordatorios y resúmenes de presupuesto. Estas notificaciones se generan en tu dispositivo, no se envían desde un servidor.</p>
+<h2>Eliminar tus datos</h2>
+<p>Puedes eliminar permanentemente tu cuenta y todos los datos asociados desde dentro de la aplicación (Perfil → Eliminar cuenta). Esta acción no se puede deshacer.</p>
+<h2>Privacidad de los menores</h2>
+<p>Bütçem no está dirigida a menores de 13 años y no recopila datos de ellos a sabiendas.</p>
+<h2>Contacto</h2>
+<p>Para preguntas sobre privacidad: <a href="mailto:alparslann95@gmail.com">alparslann95@gmail.com</a></p>
+<h2>Cambios</h2>
+<p>Esta política puede actualizarse ocasionalmente; los cambios importantes se anunciarán dentro de la aplicación.</p>
+</div>
+
+<div data-lang-block="fr">
+<h1>Bütçem — Politique de confidentialité</h1>
+<p class="updated">Dernière mise à jour : 31 août 2026</p>
+<p>Bütçem est une application mobile de suivi de budget personnel et partagé (en groupe). Cette page explique quelles données sont collectées lors de l'utilisation de l'application, comment elles sont stockées et quels sont vos droits.</p>
+<h2>Quelles données sont collectées</h2>
+<ul>
+  <li><strong>Informations de compte :</strong> adresse e-mail (lors de la connexion par e-mail, Google ou Apple), nom affiché. Vous pouvez aussi utiliser l'application sans compte (mode invité).</li>
+  <li><strong>Données budgétaires :</strong> les écritures de revenus/dépenses que vous saisissez, catégories, montants, dates, notes de mode de paiement. Si vous rejoignez un groupe (budget partagé), ces données sont partagées avec les membres du groupe.</li>
+  <li><strong>Données techniques/de l'appareil :</strong> en cas de plantage de l'application, un rapport de plantage de diagnostic est envoyé (Firebase Crashlytics) — il ne contient aucune donnée financière personnelle.</li>
+</ul>
+<h2>Où les données sont stockées</h2>
+<p>Toutes les données sont stockées sur l'infrastructure Firebase de Google (Firebase Authentication, Cloud Firestore). Bütçem n'a pas de serveur propre ; l'accès aux données est limité par les règles de sécurité Firebase au propriétaire du compte et, pour les entrées partagées, aux membres de ce groupe.</p>
+<p>Lors de la conversion d'une écriture en devise étrangère vers son équivalent en livre turque (seulement si vous activez explicitement cette fonctionnalité), seules la date et le code de devise sont envoyés au service de taux de change Frankfurter (frankfurter.dev) — aucune donnée personnelle n'est partagée.</p>
+<h2>Comment les données sont utilisées</h2>
+<p>Les données collectées sont utilisées uniquement pour fournir les fonctionnalités propres de l'application (suivi de budget, rapports, notifications de rappel). Les données ne sont jamais vendues ni partagées à des fins marketing.</p>
+<h2>Notifications</h2>
+<p>Si vous accordez la permission, l'application utilise des notifications locales sur votre appareil pour afficher des rappels et résumés de budget. Ces notifications sont générées sur votre appareil, pas envoyées depuis un serveur.</p>
+<h2>Supprimer vos données</h2>
+<p>Vous pouvez supprimer définitivement votre compte et toutes les données associées depuis l'application (Profil → Supprimer le compte). Cette action est irréversible.</p>
+<h2>Confidentialité des enfants</h2>
+<p>Bütçem ne s'adresse pas aux enfants de moins de 13 ans et ne collecte pas sciemment de données les concernant.</p>
+<h2>Contact</h2>
+<p>Pour toute question sur la confidentialité : <a href="mailto:alparslann95@gmail.com">alparslann95@gmail.com</a></p>
+<h2>Modifications</h2>
+<p>Cette politique peut être mise à jour de temps à autre ; les changements importants seront annoncés dans l'application.</p>
+</div>
+
+<script>
+  var supported = ['tr','en','de','pt','es','fr'];
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang-block]').forEach(function(el) {
+      el.classList.toggle('active', el.getAttribute('data-lang-block') === lang);
+    });
+    document.querySelectorAll('.langbar button').forEach(function(b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('butcem_legal_lang', lang); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('butcem_legal_lang'); } catch (e) {}
+  var browser = (navigator.language || 'tr').slice(0, 2);
+  var initial = saved || (supported.indexOf(browser) !== -1 ? browser : 'tr');
+  setLang(initial);
+</script>
 </body>
 </html>
